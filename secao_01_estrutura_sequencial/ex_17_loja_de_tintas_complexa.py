@@ -30,3 +30,32 @@ Acrescente 10% de folga e sempre arredonde os valores para cima, isto é, consid
 
 def calcular_latas_e_preco_de_tinta():
     """Escreva aqui em baixo a sua solução"""
+
+    tamanho = float(input('Insira o tamanho em metros quadrados da área a ser pintada'))
+    tamanho_folga = (tamanho * 1.1)
+    litros_tinta = round((tamanho_folga/6) + 0.5)
+
+#Situação 1: latas
+    q_latas = round((litros_tinta / 18)+0.5)
+    custo_latas = int(q_latas * 80.00)
+    sobra_latas = (q_latas * 18) - litros_tinta
+
+
+#Situação 2: galoes
+    q_galoes = round((litros_tinta / 3.6) + 0.5)
+    custog= int(q_galoes * 25.00)
+    sobrag = (q_galoes * 3.6) - litros_tinta
+#
+
+# Situação 3: latas e galoes
+    q_misturaL = int(litros_tinta // 18)
+    q_misturaG = ((litros_tinta-q_misturaL *18) )
+    custo_mistura = (q_misturaL*80) + (q_misturaG*25)
+    sobra_mistura = ((q_misturaG*3.6) + (q_misturaL*18)) - litros_tinta
+
+
+
+    print(f'Você deve comprar {litros_tinta} litros de tinta.')
+    print(f'Você pode comprar {q_latas} lata(s) de 18 litros a um custo de R$ {custo_latas}. Vão sobrar {sobra_latas:.1f} litro(s) de tinta.')
+    print(f'Você pode comprar {q_galoes} lata(s) de 3.6 litros a um custo de R$ {custog}. Vão sobrar {sobrag:.1f} litro(s) de tinta.')
+    print(f'Para menor custo, você pode comprar {q_misturaL} lata(s) de 18 litros e {q_misturaG} galão(ões) de 3.6 litros a um custo de R$ {custo_mistura}. Vão sobrar {sobra_mistura:.1f} litro(s) de tinta.')
