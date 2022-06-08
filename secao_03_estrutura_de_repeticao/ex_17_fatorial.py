@@ -20,6 +20,17 @@ Ex.: 5!=5.4.3.2.1=120
 
 """
 
-
 def calcular_fatorial(n: int) -> int:
     """Escreva aqui em baixo a sua solução"""
+
+
+    expo = n
+    if n == 0:
+        print(1)
+    else:
+        while n > 1:
+            expo = (expo * (n-1))
+            n -= 1
+        print(expo)
+
+
