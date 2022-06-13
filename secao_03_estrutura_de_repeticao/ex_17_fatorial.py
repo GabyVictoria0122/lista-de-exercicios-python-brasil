@@ -34,3 +34,4 @@ def calcular_fatorial(n: int) -> int:
         print(expo)
 
 
+ # feito

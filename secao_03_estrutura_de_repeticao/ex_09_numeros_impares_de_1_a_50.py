@@ -22,3 +22,4 @@ def calcular_numeros_impares_de_1_a_50() -> str:
             print(i, end="'")
         else:
             print(i, end=', ')
+ # feito

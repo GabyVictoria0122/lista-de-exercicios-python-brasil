@@ -32,3 +32,5 @@ def calcular_numeros_no_intervalo_e_somar(inicio: int, fim: int) -> str:
                     print(i, end=f". Soma: {soma}'")
                 else:
                     print(i, end=', ')
+
+                    # feito

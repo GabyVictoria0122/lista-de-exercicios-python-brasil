@@ -72,3 +72,4 @@ def cadastrar_usuario(nome: str, idade: int, salario: float, sexo: str, estado_c
         print('Cadastro realizado com sucesso')
 
 
+ # feito

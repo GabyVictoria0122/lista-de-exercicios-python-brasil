@@ -30,3 +30,4 @@ def calcular_ano_ultrapassagem_populacional() -> str:
 
     print(f"'População de A, depois de {ano} ano(s) será de {inicio_A:.0f} pessoas, superando a de B, que será de {inicio_B:.0f} pessoas'")
 
+ # feito

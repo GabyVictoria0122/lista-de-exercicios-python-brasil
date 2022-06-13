@@ -31,3 +31,5 @@ def validar_senha():
         entrada_s = input("Dígite seu usuario e senha")
 
     print(f"'Cadastro realizado com suceso, seu login é {entrada_u}'")
+
+    # feito

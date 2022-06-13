@@ -42,3 +42,5 @@ def calcular_fatorial(n: int) -> int:
         print(expo)
     else:
         print(f"'Apenas valores positivos, inteiros e menores que 16 são válidos. Não é possível calcular para {n}'")
+
+        # feito

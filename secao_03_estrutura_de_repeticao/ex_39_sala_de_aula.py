@@ -17,3 +17,19 @@ representando a sua altura em centímetros. Encontre o aluno mais alto e o mais 
 
 def calcular_aluno_mais_baixo_e_mais_alto(*alunos) -> str:
     """Escreva aqui em baixo a sua solução"""
+
+    max_alt = min_alt = None
+    nome_max = nome_min = ''
+
+    for (nome, altura) in alunos:
+        if min_alt == None or altura < min_alt:
+            min_alt = altura
+            nome_min = nome
+        if max_alt == None or altura > max_alt:
+            max_alt = altura
+            nome_max = nome
+
+
+    print(f"'O maior aluno é o {nome_max} com {max_alt} cm. O menor aluno é o {nome_min} com {min_alt} cm'")
+
+    #feito

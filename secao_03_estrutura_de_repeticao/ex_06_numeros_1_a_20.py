@@ -45,3 +45,4 @@ def escrever_numeros_de_1_a_20(formato:str) -> str:
     else:
         for n in lista:
             print(n)
+ # feito

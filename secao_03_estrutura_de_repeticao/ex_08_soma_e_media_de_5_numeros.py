@@ -21,3 +21,4 @@ def calcular_soma_e_media(n1: int, n2: int, n3: int, n4: int, n5: int) -> str:
     soma = sum(lista)
     media = soma /5
     print(f"'Soma: {soma}, Média: {media:.2f}'")
+ # feito

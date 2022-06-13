@@ -144,3 +144,4 @@ def gerar_tabuada(n: int) -> str:
             i += 1
     else:
         print('Somente pode ser gerada tabuada de 1 a 10')
+ # feito

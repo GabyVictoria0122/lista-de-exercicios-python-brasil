@@ -42,3 +42,4 @@ def obter_numero_valido():
         nota = input('Insira uma nota de 0 a 10')
     print(nota)
 
+ # feito

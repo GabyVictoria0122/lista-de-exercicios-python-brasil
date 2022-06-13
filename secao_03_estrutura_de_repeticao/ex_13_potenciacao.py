@@ -26,3 +26,5 @@ def calcular_potencia(base: int, expoente: int) -> int:
         i += 1
 
     print(multi)
+
+    # feito

@@ -39,3 +39,5 @@ def calcular_ano_ultrapassagem_populacional(
         taxaA = taxa_crescimento_populacao_menor * 100
         taxaB = taxa_crescimento_populacao_maior * 100
         print(f"'A taxa de crescimento do país B ({taxaB}%) deve ser menor do que a do país A ({taxaA}%)'")
+
+        # feito
