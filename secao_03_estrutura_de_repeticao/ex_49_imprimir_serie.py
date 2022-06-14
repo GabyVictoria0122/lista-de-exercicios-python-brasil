@@ -38,3 +38,18 @@ Faça um programa que mostre os n termos da Série a seguir:
 
 def imprimir_serie(n):
     """Escreva aqui em baixo a sua solução"""
+
+    i = 1
+    soma = 0
+    lista_fracao = []
+
+
+    for numerador, denominador in zip(range(1, n+1), range(1, 2*n+1, 2)):
+        fracao = f'{numerador}/{denominador}'
+        lista_fracao.append(fracao)
+        soma += numerador / denominador
+        i += 1
+    print('S =',' + '.join(map(str, lista_fracao)))
+    print(f"soma = {soma}")
+
+#com help
