@@ -27,13 +27,20 @@ Ex.: 5!=5.4.3.2.1=120
 def calcular_fatorial(n: int):
     """Escreva aqui em baixo a sua solução"""
 
-
     expo = n
-    if type(n) == int and n > 0 and n <= 16:
-        while n > 1:
-            expo = (expo * (n-1))
-            n -= 1
-        print(f"Fatorial de {n}:")
-        print(f"{n}!: ")
-    else:
-        print(f"'Apenas valores positivos, inteiros e menores que 16 são válidos. Não é possível calcular para {n}'")
+    lista_n = []
+    if type(n) == int and n > 0:
+        if n == 1:
+            print(f"Fatorial de {n}:")
+            print(f"{n}! = {n} = {n}")
+        else:
+            primeiro_n = n
+            while n > 1:
+                expo = (expo * (n-1))
+                n -= 1
+                lista_n.append(n)
+
+            print_lista = ' . '.join(map(str, lista_n))
+
+            print(f"Fatorial de {primeiro_n}:")
+            print(f"{primeiro_n}! = {primeiro_n} . {print_lista} = {expo}")
