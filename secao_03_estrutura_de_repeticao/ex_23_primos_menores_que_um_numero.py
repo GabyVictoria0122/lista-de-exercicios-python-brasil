@@ -44,4 +44,102 @@ from typing import Tuple
 def calcular_primos_e_divisoes(n: int) -> Tuple[str, int]:
     """Escreva aqui em baixo a sua solução"""
 
+    # i = eh_primo(n)
+    # return (imprimir_primos(n), i )
+    divisoes = nro_divisoes(n)
+    return (imprimir_primos(n), divisoes)
+
+def imprimir_primos(n):
+
+    primos = []
+    for num in range(2, n+1):
+        if is_prime(num):
+            primos.append(str(num))
+
+    return ', '.join(primos)
+
+
+
+
+# def eh_primo(n):
+
+    # i = 0
+    # for v in range(1, n + 1):
+    #     if n % v == 0:
+    #         i += 1
+    # if i != 2:
+    #     return False
+    # return True
+
+def is_prime(n):
+    """retorna se o número é primo"""
+    prime = True
+    for num in range(2, n):
+        resto_divisao = n % num
+        if resto_divisao == 0:
+            prime = False
+            break
+    return prime
+
+def nro_divisoes(n):
+    """retorna se o número é primo"""
+    divisoes = 0
+    for num in range(2, n):
+        divisoes += 1
+
+    return divisoes
+
+#feito com help do Roger
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
