@@ -90,3 +90,35 @@ from collections import Counter
 
 def apurar_votos(*votos):
     """Escreva aqui em baixo a sua solução"""
+
+    quant_bos= quant_lul= quant_dil= quant_fhc= quant_nul= quant_bra = 0
+
+    for x in votos:
+        if x == '1':
+            quant_bos += 1
+        if x == '2':
+            quant_lul += 1
+        if x == '3':
+            quant_dil += 1
+        if x == '4':
+            quant_fhc += 1
+        if x == '5':
+            quant_nul += 1
+        if x == '6':
+            quant_bra += 1
+
+    porcent_bos = (quant_bos / len(votos)) * 100
+    porcent_lul = (quant_lul / len(votos)) * 100
+    porcent_dil = (quant_dil / len(votos)) * 100
+    porcent_fhc = (quant_fhc / len(votos)) * 100
+    porcent_nul = (quant_nul / len(votos)) * 100
+    porcent_bra = (quant_bra / len(votos)) * 100
+
+    print(f"""Código do Candidato Nome do Candidato Votos Porcentagem sobre total
+1                   Bostonaro         {quant_bos}{porcent_bos:>10.1f}%
+2                   Luladrão          {quant_lul}{porcent_lul:>10.1f}%
+3                   Dilmanta          {quant_dil}{porcent_dil:>10.1f}%
+4                   FHC Isentão       {quant_fhc}{porcent_fhc:>10.1f}%
+-------------------------------------------------------------------
+5                   Votos Nulos       {quant_nul}{porcent_nul:>10.1f}%
+6                   Votos Brancos     {quant_bra}{porcent_bra:>10.1f}%""")
