@@ -28,3 +28,43 @@ Mostre os valores com uma casa decimail
 
 def calcular_estatisticas(*cidades):
     """Escreva aqui em baixo a sua solução"""
+
+    indice_maior = indice_menor = media = None
+    soma_car = soma_acid = quant = 0
+
+    """Resolução Item 1) Qual o maior e menor índice de acidentes de transito e a que cidade pertence;"""
+
+    for (cod, quant_car, quant_acid) in cidades:
+        indice = quant_acid / quant_car
+        if indice_maior == None or indice_maior < indice:
+            indice_maior = indice
+            cod_maior = cod
+        if indice_menor == None or indice_menor > indice:
+            indice_menor = indice
+            cod_menor = cod
+
+    indice_maior *= 1000
+    indice_menor *= 1000
+
+    """Resolução Item 2) Qual a média de veículos nas cinco cidades juntas;"""
+
+    for (cod, quant_car, quant_acid) in cidades:
+        soma_car += quant_car
+        if quant_car <= 150_000:
+            soma_acid += quant_acid
+            quant += 1
+
+    media_car = soma_car / len(cidades)
+
+    """Resolução Item 3) Qual a média de acidentes de trânsito nas cidades com menos de 2.000 veículos de passeio."""
+
+
+    media_acid = soma_acid / quant
+
+
+    print(f"""O maior índice de acidentes é de {cod_maior}, com {indice_maior} acidentes por mil carros.
+O menor índice de acidentes é de {cod_menor}, com {indice_menor:.1f} acidentes por mil carros.
+O média de veículos por cidade é de {media_car:.0f}.
+A média de acidentes total nas cidades com menos de 150 mil carros é de {media_acid} acidentes.""")
+
+    #feito

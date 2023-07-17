@@ -59,3 +59,57 @@ Mostre o restultado com duas casas decimais
 
 def calcular_preco_da_compra(kilos_de_morango: int, kilos_de_maca: int):
     """Escreva aqui em baixo a sua solução"""
+
+
+    if 0 < kilos_de_morango <= 5:
+        preco_mo = 2.50
+    else:
+        preco_mo = 2.20
+
+    if 0 < kilos_de_maca <= 5:
+        preco_ma = 1.80
+    else:
+        preco_ma = 1.50
+
+    kg_total = (kilos_de_morango + kilos_de_maca)
+    valor_total = (kilos_de_morango * preco_mo) + (kilos_de_maca * preco_ma)
+
+    if kg_total > 8 or valor_total > 25.00:
+        desconto = valor_total * 0.1
+        valor_total = valor_total - desconto
+    else:
+        desconto = 0.00
+
+
+
+    if kilos_de_maca == 0:
+        valor_mo = kilos_de_morango * preco_mo
+        resul_valor = f'{valor_mo:.2f}'
+        resul_total = f'{valor_total:.2f}'
+
+        print(f'(+)  Morango  - valor:  R$', resul_valor.rjust(5), f'- quantidade:  {kilos_de_morango} kg - preço: R$ {preco_mo:.2f}/kg')
+        print(f'(-)  Desconto - valor:  R$  {desconto:.2f}')
+        print(f"          Valor Total:  R${resul_total.rjust(6)}")
+
+    if kilos_de_morango == 0:
+        valor_ma = kilos_de_maca * preco_ma
+        resul_valor = f'{valor_ma:.2f}'
+        resul_total = f'{valor_total:.2f}'
+
+        print(f'(+)  Maça     - valor:  R$', resul_valor.rjust(5), f'- quantidade:  {kilos_de_maca} kg - preço: R$ {preco_ma:.2f}/kg')
+        print(f'(-)  Desconto - valor:  R$  {desconto:.2f}')
+        print(f"          Valor Total:  R${resul_total.rjust(6)}")
+
+    if kilos_de_maca != 0 and kilos_de_morango != 0:
+        valor_ma = kilos_de_maca * preco_ma
+        valor_mo = kilos_de_morango * preco_mo
+        resul_valor_ma = f'{valor_ma:.2f}'
+        resul_valor_mo = f'{valor_mo:.2f}'
+        resul_total = f'{valor_total:.2f}'
+
+
+        print(f'(+)  Morango  - valor:  R$', resul_valor_mo.rjust(5), f'- quantidade:  {kilos_de_morango} kg - preço: R$ {preco_mo:.2f}/kg')
+        print(f'(+)  Maça     - valor:  R$', resul_valor_ma.rjust(5), f'- quantidade:  {kilos_de_maca} kg - preço: R$ {preco_ma:.2f}/kg')
+        print(f'(-)  Desconto - valor:  R$  {desconto:.2f}')
+        print(f"          Valor Total:  R${resul_total.rjust(6)}")
+

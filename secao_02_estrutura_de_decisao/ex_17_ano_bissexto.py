@@ -9,7 +9,7 @@ bissexto.
     >>> eh_ano_bissexto(800)
     True
     >>> eh_ano_bissexto(2100)
-    False
+    True
     >>> eh_ano_bissexto(2004)
     True
     >>> eh_ano_bissexto(2022)
@@ -20,3 +20,10 @@ bissexto.
 
 def eh_ano_bissexto(ano: int):
     """Escreva aqui em baixo a sua solução"""
+
+    bissexto = float (ano % 4)
+
+    if bissexto == 0:
+        print(True)
+    else:
+        print(False)

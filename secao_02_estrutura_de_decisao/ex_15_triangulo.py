@@ -1,3 +1,4 @@
+
 """
 Exercício 15 da seção de estrutura de decisão da Python Brasil:
 https://wiki.python.org.br/EstruturaDeDecisao
@@ -27,3 +28,14 @@ Triângulo Escaleno: três lados diferentes;
 
 def classificar_triangulo(lado_a: float, lado_b: float, lado_c: float):
     """Escreva aqui em baixo a sua solução"""
+
+
+    if (lado_a + lado_b) > lado_c and (lado_a + lado_c) > lado_b and (lado_c + lado_b) > lado_a :
+        if lado_a == lado_b and lado_a == lado_c and lado_b == lado_c:
+            print("'Triângulo Equilátero'")
+        elif lado_a == lado_b or lado_c == lado_b or lado_a ==lado_c:
+            print("'Triângulo Isósceles'")
+        elif lado_a != lado_b != lado_c:
+            print("'Triângulo Escaleno'")
+    else:
+            print("'Não é um triângulo'")
